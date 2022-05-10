@@ -50,7 +50,7 @@ const Title = () => {
             color="white"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,10vw,4.75rem)"
+            fontSize="clamp(2.75rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -75,7 +75,7 @@ const Title = () => {
             // bgGradient="linear(to-r,#4B50E6,#E250E5)"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,10vw,4.75rem)"
+            fontSize="clamp(2.75rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -91,7 +91,7 @@ const Title = () => {
             color="white"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,10vw,4.75rem)"
+            fontSize="clamp(2.75rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -107,7 +107,7 @@ const Title = () => {
             color="white"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="400"
-            fontSize="clamp(1.3rem,10vw,1.5625rem)"
+            fontSize="clamp(1.3rem,5vw,1.5625rem)"
             lineHeight="30px"
             textAlign={{
               base: 'center',
@@ -120,8 +120,9 @@ const Title = () => {
             Pulse is a decentralized platform that allows users to trade and
             store non-fungible tokens
           </Text>
-          <Box
-            width="60%"
+          <Flex
+            width="90%"
+            maxW="350px"
             margin={{
               base: '0 auto',
               sm: '0 auto',
@@ -129,50 +130,80 @@ const Title = () => {
               lg: '0',
               xl: '0',
             }}
+            flexDirection={{
+              base: 'row',
+              sm: 'row',
+              md: 'row',
+              lg: 'row',
+              xl: 'row',
+            }}
           >
-            <Button
-              cursor="pointer"
-              size="lg"
-              border="1px"
-              borderColor="#5142FC"
-              bgColor="#14141F"
-              _hover={{
-                backgroundImage: 'linear-gradient(#E250E5,#4B50E6)',
-              }}
-              color="white"
-              my="3.5rem"
-              textAlign="center"
-              px="2.0em"
-              py="1.5em"
-              // width="154px"
-              // height="56px"
-            >
-              <Image mr="0.5rem" src={VectorCompassImage} />
-              Explore
-            </Button>
+            <Box flex="1">
+              <Button
+                cursor="pointer"
+                size="lg"
+                border="1px"
+                borderColor="#5142FC"
+                bgColor="#14141F"
+                _hover={{
+                  backgroundImage: 'linear-gradient(#E250E5,#4B50E6)',
+                }}
+                color="white"
+                my={{
+                  base: '1.5rem',
+                  sm: '1.5rem',
+                  md: '3.5rem',
+                  lg: '3.5rem',
+                  xl: '3.5rem',
+                }}
+                textAlign="center"
+                px="2.0em"
+                py="1.5em"
+                // width="154px"
+                // height="56px"
+              >
+                <Image mr="0.5rem" src={VectorCompassImage} />
+                Explore
+              </Button>
+            </Box>
 
-            <Button
-              size="lg"
-              border="1px"
-              borderColor="#14141F"
-              bgColor="#14141F"
-              color="white"
-              ml="3rem"
-              my="3.5rem"
-              _hover={{
-                bgColor: '#14141F',
-                borderColor: '#14141F',
-              }}
-              textAlign="center"
-              px="2.0em"
-              py="1.5em"
-              // width="154px"
-              // height="56px"
-            >
-              Learn More
-              <Image ml="0.5rem" src={ArrowLearnImage} />
-            </Button>
-          </Box>
+            <Box flex="1">
+              <Button
+                size="lg"
+                border="1px"
+                borderColor="#14141F"
+                bgColor="#14141F"
+                color="white"
+                // ml="3rem"
+                my={{
+                  base: '1.5rem',
+                  sm: '1.5rem',
+                  md: '3.5rem',
+                  lg: '3.5rem',
+                  xl: '3.5rem',
+                }}
+                _hover={{
+                  bgColor: '#14141F',
+                  borderColor: '#14141F',
+                }}
+                textAlign="center"
+                px={{
+                  base: '0.5rem',
+                  sm: '0.5rem',
+                  md: '1.5rem',
+                  lg: '1.5rem',
+                  xl: '1.5rem',
+                }}
+                py="1.5em"
+                // width="154px"
+                // height="56px"
+              >
+                Learn More
+                <Image ml="0.5rem" src={ArrowLearnImage} />
+              </Button>
+            </Box>
+          </Flex>
+
           <Box
             position="absolute"
             top="364px"
