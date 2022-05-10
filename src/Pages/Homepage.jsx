@@ -112,7 +112,7 @@ const Homepage = () => {
               filterUnits="userSpaceOnUse"
               colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -132,7 +132,7 @@ const Homepage = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(305.659 300.463) rotate(34.1621) scale(179.488 167.508)"
             >
-              <stop stop-color="#2B1867" />
+              <stop stopColor="#2B1867" />
               <stop offset="0.487063" stopColor="#382383" />
               <stop offset="0.781641" stopColor="#452896" />
               <stop offset="1" stopColor="#76248E" />
@@ -142,7 +142,7 @@ const Homepage = () => {
       </Box>
       <Headers />
       <Title />
-      <Liveauctions/>
+      <Liveauctions />
     </Box>
   );
 };

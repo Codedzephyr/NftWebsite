@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Flex } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
@@ -66,11 +65,11 @@ const Title = () => {
           <Text
             // bgClip="text"
             sx={{
-              '-webkit-text-fill-color': '#14141F',
+              WebkitTextFillColor: '#14141F',
               background:
                 '-webkit-linear-gradient(-86deg,#E250E5 9%, #4B50E6 64%)',
-              '-webkit-background-clip': 'text',
-              '-webkit-text-stroke': '4px transparent',
+              WebkitBackgroundClip: 'text',
+              WebkitTextStroke: '4px transparent',
             }}
             color="#14141F"
             // bgGradient="linear(to-r,#4B50E6,#E250E5)"
@@ -209,7 +208,7 @@ const Title = () => {
                   y2="22.5255"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#E250E5" />
+                  <stop stopColor="#E250E5" />
                   <stop offset="1" stopColor="#4B50E6" />
                 </linearGradient>
               </defs>
