@@ -20,6 +20,18 @@ const Title = () => {
           xl: 'row',
         }}
       >
+        <Box
+          flex="1"
+          display={{
+            base: 'block',
+            sm: 'block',
+            md: 'block',
+            lg: 'none',
+            xl: 'none',
+          }}
+        >
+          <Image src={VectorBackgroundImage} />
+        </Box>
         <Box flex="1" position="relative">
           <Box
             position="absolute"
@@ -246,7 +258,16 @@ const Title = () => {
             </svg>
           </Box>
         </Box>
-        <Box flex="1">
+        <Box
+          flex="1"
+          display={{
+            base: 'none',
+            sm: 'none',
+            md: 'none',
+            lg: 'block',
+            xl: 'block',
+          }}
+        >
           <Image src={VectorBackgroundImage} />
         </Box>
       </Flex>
