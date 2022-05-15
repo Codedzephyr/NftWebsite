@@ -11,6 +11,11 @@ import { UnorderedList, ListItem } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
 import ArrowLeftImage from '../Images/Group 775.png';
 import WhiteGorillaImage from '../Images/WhiteGorilla.png';
+import SamuraiImage from '../Images/Samurai.png';
+import BlackGorillaImage from '../Images/BlackGorilla.png';
+import MuriImage from "../Images/Muri.png";
+import ThugImage from '../Images/Thug.png';
+import Bald from '../Images/Bald.png';
 import ArrowRightImage from '../Images/Group 778.png';
 import DanishMainImage from '../Images/DanishMain.png';
 
@@ -171,12 +176,7 @@ const LiveauctionsDesktop = () => {
     <Box w="95%" margin="0 auto" py="5em" maxW="1600px" id="joker">
       <Slider ref={c => (slider.current = c)} {...settings} id="joker">
         <Box>
-          <Box
-            p="0.9em"
-            bgColor="#343444"
-            borderRadius="20px"
-            // w={{ base: '368px' }}
-          >
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
             <Image src={WhiteGorillaImage} borderRadius="20px" />
             <Text
               ml="0.3rem"
@@ -227,7 +227,7 @@ const LiveauctionsDesktop = () => {
                   fontSize="13px"
                   lineHeight="20px"
                 >
-                  Creator
+                  4.89 eTH
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -245,20 +245,276 @@ const LiveauctionsDesktop = () => {
           </Box>
         </Box>
         <Box>
-          <Box p="0.7em" bgColor="#343444">
-            <Image src={WhiteGorillaImage} />
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Image src={BlackGorillaImage} borderRadius="20px" />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              Bored Ape #22
+            </Text>
+            {/* bottom part */}
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={Bald} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    Danish Main
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  5.05 eTH
+                </Text>
+              </Box>
+            </Flex>
           </Box>
         </Box>
         <Box>
-          <Box p="0.7em" bgColor="#343444">
-            <Image src={WhiteGorillaImage} />
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Image src={SamuraiImage} borderRadius="20px" />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              Azuki #8152
+            </Text>
+            {/* bottom part */}
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={DanishMainImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    Abyeski
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  5.05 eTH
+                </Text>
+              </Box>
+            </Flex>
           </Box>
         </Box>
         <Box>
-          <Text>4</Text>
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Image src={ThugImage} borderRadius="20px" />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
+            {/* bottom part */}
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  0.50 eTH
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
         <Box>
-          <Text>5</Text>
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Image src={ThugImage} borderRadius="20px" />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
+            {/* bottom part */}
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  0.50 eTH
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
         <Box>
           <Text>6</Text>
