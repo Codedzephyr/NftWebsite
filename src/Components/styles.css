@@ -8,8 +8,6 @@
 
 @media screen and (max-width: 480px) {
   .slick-slide {
-    margin: 0 3px 0 8px !important;
-    width: 338px !important;
-
+    margin: 0 5px !important;
   }
 }

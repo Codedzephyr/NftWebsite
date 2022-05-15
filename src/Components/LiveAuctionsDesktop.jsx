@@ -39,6 +39,7 @@ const LiveauctionsDesktop = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -170,7 +171,12 @@ const LiveauctionsDesktop = () => {
     <Box w="95%" margin="0 auto" py="5em" maxW="1600px" id="joker">
       <Slider ref={c => (slider.current = c)} {...settings} id="joker">
         <Box>
-          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+          <Box
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+            w={{ base: '368px' }}
+          >
             <Image src={WhiteGorillaImage} borderRadius="20px" />
             <Text
               ml="0.3rem"
