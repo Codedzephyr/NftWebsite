@@ -107,12 +107,17 @@ const Headers = () => {
           >
             <Box onClick={handleClickShow}>
               {isHamburgerDisplay ? (
-                <Box flex="1" display="flex" justifyContent="flex-end">
+                <Box
+                  flex="1"
+                  display="flex"
+                  justifyContent="flex-end"
+                  cursor="pointer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
-                    width="50"
-                    height="50"
+                    width="35"
+                    height="35"
                   >
                     <motion.path
                       fill="#fff"
@@ -136,16 +141,17 @@ const Headers = () => {
                   variants={closeVariants}
                   initial="start"
                   animate="finished"
+                  cursor="pointer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="53.7"
-                    height="53.7"
-                    viewBox="0 0 53.7 53.7"
+                    width="35"
+                    height="35"
+                    viewBox="0 0 512 512"
                   >
                     <path
                       fill="#fff"
-                      d="M35.6 34.4L28 26.8l7.6-7.6c.2-.2.2-.5 0-.7l-.5-.5c-.2-.2-.5-.2-.7 0l-7.6 7.6-7.5-7.6c-.2-.2-.5-.2-.7 0l-.6.6c-.2.2-.2.5 0 .7l7.6 7.6-7.6 7.5c-.2.2-.2.5 0 .7l.5.5c.2.2.5.2.7 0l7.6-7.6 7.6 7.6c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7z"
+                      d="M437.5 386.6L306.9 256l130.6-130.6c14.1-14.1 14.1-36.8 0-50.9-14.1-14.1-36.8-14.1-50.9 0L256 205.1 125.4 74.5c-14.1-14.1-36.8-14.1-50.9 0-14.1 14.1-14.1 36.8 0 50.9L205.1 256 74.5 386.6c-14.1 14.1-14.1 36.8 0 50.9 14.1 14.1 36.8 14.1 50.9 0L256 306.9l130.6 130.6c14.1 14.1 36.8 14.1 50.9 0 14-14.1 14-36.9 0-50.9z"
                     />
                   </svg>
                 </Box>

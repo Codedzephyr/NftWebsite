@@ -62,7 +62,7 @@ const Title = () => {
             color="white"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,5vw,4.75rem)"
+            fontSize="clamp(2.2rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -87,7 +87,7 @@ const Title = () => {
             // bgGradient="linear(to-r,#4B50E6,#E250E5)"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,5vw,4.75rem)"
+            fontSize="clamp(2.2rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -103,7 +103,7 @@ const Title = () => {
             color="white"
             fontFamily="'Urbanist', sans-serif"
             fontWeight="700"
-            fontSize="clamp(2.75rem,5vw,4.75rem)"
+            fontSize="clamp(2.2rem,5vw,4.75rem)"
             lineHeight="98px"
             textAlign={{
               base: 'center',
@@ -133,7 +133,7 @@ const Title = () => {
             store non-fungible tokens
           </Text>
           <Flex
-            width="90%"
+            width="95%"
             maxW="350px"
             margin={{
               base: '0 auto',
