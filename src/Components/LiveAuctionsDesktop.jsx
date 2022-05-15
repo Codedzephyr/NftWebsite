@@ -33,6 +33,7 @@ const LiveauctionsDesktop = () => {
   const settings = {
     dots: true,
     infinite: true,
+    speed: 500,
     initialSlide: 0,
     // nextArrow: <SampleNextArrow />,
     slidesToShow: 5,
@@ -186,10 +187,7 @@ const LiveauctionsDesktop = () => {
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
-                  <Image
-                    src={DanishMainImage}
-                    borderRadius="50%"
-                  />
+                  <Image src={DanishMainImage} borderRadius="50%" />
                 </Box>
                 <Box flex="4">
                   <Text
@@ -198,7 +196,7 @@ const LiveauctionsDesktop = () => {
                     fontWeight="400"
                     fontSize="13px"
                     lineHeight="20px"
-                    ml="0.2rem"
+                    ml="0.7rem"
                   >
                     Creator
                   </Text>
@@ -209,7 +207,7 @@ const LiveauctionsDesktop = () => {
                     fontSize="15px"
                     lineHeight="22px"
                     my="0.1rem"
-                    ml="0.2rem"
+                    ml="0.7rem"
                   >
                     Danish Main
                   </Text>
