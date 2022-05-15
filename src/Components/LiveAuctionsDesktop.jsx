@@ -175,7 +175,7 @@ const LiveauctionsDesktop = () => {
             p="0.9em"
             bgColor="#343444"
             borderRadius="20px"
-            w={{ base: '368px' }}
+            // w={{ base: '368px' }}
           >
             <Image src={WhiteGorillaImage} borderRadius="20px" />
             <Text
