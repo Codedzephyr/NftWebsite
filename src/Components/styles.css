@@ -5,7 +5,14 @@
 .slick-list {
   margin: 0 -5px !important;
 }
+/* .slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+} */
 
+/* .slick-slider {
+  overflow: hidden;
+} */
 @media screen and (max-width: 480px) {
   /* .slick-slide {
     margin: 0 5px !important;

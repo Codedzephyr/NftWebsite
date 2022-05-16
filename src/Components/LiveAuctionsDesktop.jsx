@@ -13,7 +13,7 @@ import ArrowLeftImage from '../Images/Group 775.png';
 import WhiteGorillaImage from '../Images/WhiteGorilla.png';
 import SamuraiImage from '../Images/Samurai.png';
 import BlackGorillaImage from '../Images/BlackGorilla.png';
-import MuriImage from "../Images/Muri.png";
+import MuriImage from '../Images/Muri.png';
 import ThugImage from '../Images/Thug.png';
 import Bald from '../Images/Bald.png';
 import ArrowRightImage from '../Images/Group 778.png';
@@ -41,7 +41,7 @@ const LiveauctionsDesktop = () => {
     speed: 500,
     initialSlide: 0,
     // nextArrow: <SampleNextArrow />,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     variableWidth: true,
@@ -56,9 +56,9 @@ const LiveauctionsDesktop = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 950,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -173,8 +173,8 @@ const LiveauctionsDesktop = () => {
     },
   };
   return (
-    <Box w="95%" margin="0 auto" py="5em" maxW="1600px" id="joker">
-      <Slider ref={c => (slider.current = c)} {...settings} id="joker">
+    <Box w="95%" margin="0 auto" py="5em" maxW="1600px">
+      <Slider ref={c => (slider.current = c)} {...settings} >
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
             <Image src={WhiteGorillaImage} borderRadius="20px" />
@@ -189,7 +189,7 @@ const LiveauctionsDesktop = () => {
             >
               Bored Ape #79
             </Text>
-            {/* bottom part */}
+
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -241,7 +241,6 @@ const LiveauctionsDesktop = () => {
                 </Text>
               </Box>
             </Flex>
-            {/* bottom part */}
           </Box>
         </Box>
         <Box>
@@ -258,7 +257,7 @@ const LiveauctionsDesktop = () => {
             >
               Bored Ape #22
             </Text>
-            {/* bottom part */}
+
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -326,7 +325,7 @@ const LiveauctionsDesktop = () => {
             >
               Azuki #8152
             </Text>
-            {/* bottom part */}
+
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -394,7 +393,7 @@ const LiveauctionsDesktop = () => {
             >
               MURI #8142
             </Text>
-            {/* bottom part */}
+
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -462,7 +461,7 @@ const LiveauctionsDesktop = () => {
             >
               MURI #8142
             </Text>
-            {/* bottom part */}
+
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -517,7 +516,72 @@ const LiveauctionsDesktop = () => {
           </Box>
         </Box>
         <Box>
-          <Text>6</Text>
+          <Box p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Image src={ThugImage} borderRadius="20px" />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
+
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  0.50 eTH
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
       </Slider>
     </Box>
