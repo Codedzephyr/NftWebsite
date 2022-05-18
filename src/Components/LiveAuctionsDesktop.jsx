@@ -327,7 +327,7 @@ const LiveauctionsDesktop = () => {
     },
   };
   return (
-    <Box w="95%" margin="0 auto" py="5em" maxW="1600px">
+    <Box w="95%" margin="0 auto" py="2em" maxW="1600px">
       <Slider ref={c => (slider.current = c)} {...settings}>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">

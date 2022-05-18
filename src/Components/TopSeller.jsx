@@ -11,7 +11,7 @@ import ArrowSlidePreviousImage from '../Images/Group 781.png';
 import { Flex } from '@chakra-ui/react';
 import { UnorderedList, ListItem } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
-import MuslimImage from "../Images/SecondSlideshow/MuslimDanish.png"
+import MuslimImage from '../Images/SecondSlideshow/MuslimDanish.png';
 import DavinciImage from '../Images/SecondSlideshow/DavinciCrispin.png';
 import LGBTImage from '../Images/SecondSlideshow/LGBTDanish.png';
 import GreenCrispinImage from '../Images/SecondSlideshow/GreenCrispin.png';
@@ -73,7 +73,8 @@ const TopSeller = () => {
           display="grid"
           placeItems="center"
           w="100%"
-          top="-320px !important"
+          height="100px"
+          top="-100px !important"
         >
           <Flex w="95%" margin="0 auto" my="1rem">
             <Box flex="1">
@@ -82,8 +83,8 @@ const TopSeller = () => {
                 fontFamily="'Urbanist', sans-serif"
                 fontWeight="700"
                 float={{
-                  base: 'right',
-                  sm: 'right',
+                  base: 'left',
+                  sm: 'left',
                   md: 'left',
                   lg: 'left',
                   xl: 'left',
@@ -142,9 +143,8 @@ const TopSeller = () => {
           borderRadius="50%"
           px="0.6em"
           border="1px"
-          display = "none"
+          display="none"
           borderColor="white"
-  
           placeItems="center"
         >
           <Button
@@ -191,7 +191,7 @@ const TopSeller = () => {
     },
   };
   return (
-    <Box w="95%" margin="0 auto" py="15em" maxW="1600px">
+    <Box w="95%" margin="0 auto" py="7em" maxW="1600px">
       <Slider ref={c => (slider.current = c)} {...settings}>
         <Box>
           <Box>
