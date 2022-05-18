@@ -67,7 +67,7 @@ const Headers = () => {
           base: 'column',
           sm: 'column',
           md: 'column',
-          lg: 'row',
+          lg: 'column',
           xl: 'row',
         }}
       >
@@ -101,7 +101,7 @@ const Headers = () => {
             display={{
               sm: 'block',
               md: 'block',
-              lg: 'none',
+              lg: 'block',
               xl: 'none',
             }}
           >
@@ -168,14 +168,14 @@ const Headers = () => {
             base: 'none',
             sm: 'none',
             md: 'none',
-            lg: 'block',
+            lg: 'none',
             xl: 'block',
           }}
           flexDirection={{
             base: 'column',
             sm: 'column',
             md: 'column',
-            lg: 'row',
+            lg: 'column',
             xl: 'row',
           }}
         >
@@ -274,7 +274,7 @@ const Headers = () => {
               base: 'block',
               sm: 'block',
               md: 'block',
-              lg: 'none',
+              lg: 'block',
               xl: 'none',
             }}
             id="batman"
@@ -282,7 +282,7 @@ const Headers = () => {
               base: 'column',
               sm: 'column',
               md: 'column',
-              lg: 'row',
+              lg: 'column',
               xl: 'row',
             }}
           >
@@ -294,7 +294,7 @@ const Headers = () => {
                   base: 'column',
                   sm: 'column',
                   md: 'column',
-                  lg: 'row',
+                  lg: 'column',
                   xl: 'row',
                 }}
                 width="100%"
@@ -302,7 +302,7 @@ const Headers = () => {
                   base: '0',
                   sm: '0',
                   md: '0',
-                  lg: '1.6rem',
+                  lg: '0',
                   xl: '1.6rem',
                 }}
                 justifyContent="space-between"

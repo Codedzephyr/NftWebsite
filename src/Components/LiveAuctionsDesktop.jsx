@@ -20,7 +20,17 @@ import ArrowRightImage from '../Images/Group 778.png';
 import DanishMainImage from '../Images/DanishMain.png';
 
 const LiveauctionsDesktop = () => {
+  let containersForHover = {
+    firstHoverContainer: false,
+    secondHoverContainer: false,
+    thirdHoverContainer: false,
+    fourthHoverContainer: false,
+    fifthHoverContainer: false,
+    sixthHoverContainer: false,
+  };
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showHover, setShowHover] = useState(containersForHover);
+  
 
   const slider = useRef();
 
@@ -31,8 +41,158 @@ const LiveauctionsDesktop = () => {
     slider.current.slickPrev();
   };
 
-  const handleClick = () => {
-    console.log('pool');
+  const handleClick = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleClickGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleHoverSecond = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+
+    console.log('book');
+  };
+
+  const handleHoverSecondGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleHoverThird = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+
+    console.log('book');
+  };
+
+  const handleHoverThirdGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleHoverFourth = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+
+    console.log('book');
+  };
+
+  const handleHoverFourthGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleHoverFifth = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+
+    console.log('book');
+  };
+
+  const handleHoverFifthGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+  };
+
+  const handleHoverSixth = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
+
+    console.log('book');
+  };
+
+  const handleHoverSixthGone = (e, key) => {
+    e.preventDefault();
+    const allFalse = Object.assign(
+      ...Object.keys(showHover).map(key => ({ [key]: false }))
+    );
+    setShowHover(allFalse);
+    setShowHover(prevState => ({
+      ...prevState,
+      [key]: !showHover[key],
+    }));
   };
 
   const settings = {
@@ -49,14 +209,14 @@ const LiveauctionsDesktop = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 950,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -67,8 +227,6 @@ const LiveauctionsDesktop = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-              infinite: true,
-          dots: true,
         },
       },
     ],
@@ -176,10 +334,40 @@ const LiveauctionsDesktop = () => {
   };
   return (
     <Box w="95%" margin="0 auto" py="5em" maxW="1600px">
-      <Slider ref={c => (slider.current = c)} {...settings} >
+      <Slider ref={c => (slider.current = c)} {...settings}>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={WhiteGorillaImage} borderRadius="20px" />
+            <Box
+              bgImg={WhiteGorillaImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleClick(e, 'firstHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleClickGone(e, 'firstHoverContainer');
+              }}
+            >
+              {showHover['firstHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -191,7 +379,6 @@ const LiveauctionsDesktop = () => {
             >
               Bored Ape #79
             </Text>
-
             <Flex>
               <Flex flex="2">
                 <Box flex="1">
@@ -247,7 +434,37 @@ const LiveauctionsDesktop = () => {
         </Box>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={BlackGorillaImage} borderRadius="20px" />
+            <Box
+              bgImg={BlackGorillaImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleHoverSecond(e, 'secondHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleHoverSecondGone(e, 'secondHoverContainer');
+              }}
+            >
+              {showHover['secondHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -315,7 +532,37 @@ const LiveauctionsDesktop = () => {
         </Box>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={SamuraiImage} borderRadius="20px" />
+            <Box
+              bgImg={SamuraiImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleHoverThird(e, 'thirdHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleHoverThirdGone(e, 'thirdHoverContainer');
+              }}
+            >
+              {showHover['thirdHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -383,7 +630,37 @@ const LiveauctionsDesktop = () => {
         </Box>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={ThugImage} borderRadius="20px" />
+            <Box
+              bgImg={ThugImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleHoverFourth(e, 'fourthHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleHoverFourthGone(e, 'fouthHoverContainer');
+              }}
+            >
+              {showHover['fourthHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -451,7 +728,37 @@ const LiveauctionsDesktop = () => {
         </Box>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={ThugImage} borderRadius="20px" />
+            <Box
+              bgImg={ThugImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleHoverFifth(e, 'fifthHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleHoverFifthGone(e, 'fifthHoverContainer');
+              }}
+            >
+              {showHover['fifthHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -519,7 +826,37 @@ const LiveauctionsDesktop = () => {
         </Box>
         <Box>
           <Box p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Image src={ThugImage} borderRadius="20px" />
+            <Box
+              bgImg={ThugImage}
+              bgSize="cover"
+              bgRepeat="no-repeat"
+              p="9em"
+              borderRadius="20px"
+              backgroundBlendMode="multiply"
+              _hover={{
+                cursor: 'pointer',
+                bgColor: 'rgba(0,0,0,0.5)',
+              }}
+              position="relative"
+              onMouseOver={e => {
+                handleHoverSixth(e, 'sixthHoverContainer');
+              }}
+              onMouseLeave={e => {
+                handleHoverSixthGone(e, 'sixthHoverContainer');
+              }}
+            >
+              {showHover['sixthHoverContainer'] && (
+                <Button
+                  bgColor="white"
+                  position="absolute"
+                  top="35%"
+                  left="12.5%"
+                  transform="translate(63%, 73%)"
+                >
+                  Place Bid
+                </Button>
+              )}
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
