@@ -81,13 +81,6 @@ const TopSeller = () => {
                 color="white"
                 fontFamily="'Urbanist', sans-serif"
                 fontWeight="700"
-                marginTop={{
-                  base: '3rem',
-                  sm: '3rem',
-                  md: '3rem',
-                  lg: '0rem',
-                  xl: '0rem',
-                }}
                 float={{
                   base: 'right',
                   sm: 'right',
@@ -198,7 +191,7 @@ const TopSeller = () => {
     },
   };
   return (
-    <Box w="95%" margin="0 auto" py="5em" maxW="1600px">
+    <Box w="95%" margin="0 auto" py="15em" maxW="1600px">
       <Slider ref={c => (slider.current = c)} {...settings}>
         <Box>
           <Box>
