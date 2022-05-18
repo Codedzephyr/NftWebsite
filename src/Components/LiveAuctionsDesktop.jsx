@@ -76,7 +76,6 @@ const LiveauctionsDesktop = () => {
       [key]: !showHover[key],
     }));
 
-    console.log('book');
   };
 
   const handleHoverSecondGone = (e, key) => {
@@ -102,7 +101,6 @@ const LiveauctionsDesktop = () => {
       [key]: !showHover[key],
     }));
 
-    console.log('book');
   };
 
   const handleHoverThirdGone = (e, key) => {
@@ -128,7 +126,6 @@ const LiveauctionsDesktop = () => {
       [key]: !showHover[key],
     }));
 
-    console.log('book');
   };
 
   const handleHoverFourthGone = (e, key) => {
@@ -154,7 +151,6 @@ const LiveauctionsDesktop = () => {
       [key]: !showHover[key],
     }));
 
-    console.log('book');
   };
 
   const handleHoverFifthGone = (e, key) => {
@@ -180,7 +176,6 @@ const LiveauctionsDesktop = () => {
       [key]: !showHover[key],
     }));
 
-    console.log('book');
   };
 
   const handleHoverSixthGone = (e, key) => {
@@ -234,7 +229,6 @@ const LiveauctionsDesktop = () => {
     appendDots: dots => {
       return (
         <Box
-          id="batman"
           display="grid"
           placeItems="center"
           w="100%"

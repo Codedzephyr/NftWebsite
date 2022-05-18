@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react';
 import Headers from './../Components/Headers';
 import Title from './../Components/Title';
 import Liveauctions from '../Components/Liveauctions.jsx';
+import TopSeller from '../Components/TopSeller';
 
 const Homepage = () => {
   return (
@@ -143,6 +144,7 @@ const Homepage = () => {
       <Headers />
       <Title />
       <Liveauctions />
+      <TopSeller/>
     </Box>
   );
 };
