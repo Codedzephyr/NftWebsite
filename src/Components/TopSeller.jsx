@@ -19,6 +19,7 @@ import CrispinImage from '../Images/SecondSlideshow/Crispin.png';
 import BlackDanish from '../Images/SecondSlideshow/BlackDanish.png';
 import HijabImage from '../Images/SecondSlideshow/HijabCrispin.png';
 import DanishMainImage from '../Images/SecondSlideshow/DanishMain.png';
+
 const TopSeller = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

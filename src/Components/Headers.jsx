@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Box, Collapse, useDisclosure } from '@chakra-ui/react';
+import { Box, Collapse } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
@@ -9,7 +9,7 @@ import { ListItem, UnorderedList } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 import NavbarImage from '../Vector.png';
 import WalletImage from '../Images/Wallet.png';
-// import {Collpase } from "@chakra-ui/react";
+
 
 const svgVariants = {
   start: {
