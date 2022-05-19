@@ -194,13 +194,7 @@ const TopSeller = () => {
     <Box
       w="95%"
       margin="0 auto"
-      py={{
-        base: '15em',
-        sm: '15em',
-        md: '15em',
-        lg: '11em',
-        xl: '11em',
-      }}
+      py= "7em"
       maxW="1600px"
     >
       <Slider ref={c => (slider.current = c)} {...settings}>

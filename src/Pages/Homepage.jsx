@@ -144,7 +144,8 @@ const Homepage = () => {
       <Headers />
       <Title />
       <Liveauctions />
-      <TopSeller/>
+      <Box h="100px"></Box>
+      <TopSeller />
     </Box>
   );
 };
