@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Box } from '@chakra-ui/react';
+import { Box, Collapse, useDisclosure } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
@@ -9,6 +9,7 @@ import { ListItem, UnorderedList } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 import NavbarImage from '../Vector.png';
 import WalletImage from '../Images/Wallet.png';
+// import {Collpase } from "@chakra-ui/react";
 
 const svgVariants = {
   start: {
@@ -42,6 +43,7 @@ const Headers = () => {
   const [isDisplay, setIsDisplay] = useState(false);
   const [isHamburgerDisplay, setHamburgerDisplay] = useState(true);
   const [isCloseDisplay, setCloseDisplay] = useState(false);
+  // const { isOpen, onToggle } = useDisclosure();
 
   const handleClickShow = () => {
     setIsDisplay(!isDisplay);
@@ -268,116 +270,118 @@ const Headers = () => {
           </Flex>
         </Flex>
         {isDisplay ? (
-          <Flex
-            flex="4"
-            display={{
-              base: 'block',
-              sm: 'block',
-              md: 'block',
-              lg: 'block',
-              xl: 'none',
-            }}
-            id="batman"
-            flexDirection={{
-              base: 'column',
-              sm: 'column',
-              md: 'column',
-              lg: 'column',
-              xl: 'row',
-            }}
-          >
-            <Flex flex="2">
-              <UnorderedList
-                listStyleType="none"
-                display="flex"
-                flexDirection={{
-                  base: 'column',
-                  sm: 'column',
-                  md: 'column',
-                  lg: 'column',
-                  xl: 'row',
-                }}
-                width="100%"
-                my={{
-                  base: '0',
-                  sm: '0',
-                  md: '0',
-                  lg: '0',
-                  xl: '1.6rem',
-                }}
-                justifyContent="space-between"
-              >
-                <ListItem
-                  fontFamily="'Rubik', sans-serif"
-                  fontWeight="700"
-                  fontSize="clamp(1.25rem,50vw,1.6rem)"
-                  lineHeight="56px"
-                  color="white"
-                >
-                  Explore
-                </ListItem>
-                <ListItem
-                  fontFamily="'Rubik', sans-serif"
-                  fontWeight="700"
-                  fontSize="clamp(1.25rem,50vw,1.6rem)"
-                  lineHeight="56px"
-                  color="white"
-                >
-                  Marketplace
-                </ListItem>
-                <ListItem
-                  fontFamily="'Rubik', sans-serif"
-                  fontWeight="700"
-                  fontSize="clamp(1.5rem,50vw,1.6rem)"
-                  lineHeight="56px"
-                  color="white"
-                >
-                  Artists
-                </ListItem>
-                <ListItem
-                  fontFamily="'Rubik', sans-serif"
-                  fontWeight="700"
-                  fontSize="clamp(1.5rem,50vw,1.6rem)"
-                  lineHeight="56px"
-                  color="white"
-                >
-                  Collection
-                </ListItem>
-              </UnorderedList>
-            </Flex>
+          <Collapse in ={isDisplay} animateOpacity>
             <Flex
-              flex="1"
-              justifyContent={{
-                sm: 'center',
-                md: 'center',
-                lg: 'center',
-                xl: 'flex-end',
+              flex="4"
+              display={{
+                base: 'block',
+                sm: 'block',
+                md: 'block',
+                lg: 'block',
+                xl: 'none',
+              }}
+              id="batman"
+              flexDirection={{
+                base: 'column',
+                sm: 'column',
+                md: 'column',
+                lg: 'column',
+                xl: 'row',
               }}
             >
-              <Flex w="80%" py="1.8em">
-                <SearchIcon mr="1.0rem" w={6} h={6} color="white" my="1rem" />
-                <Button
-                  width="100%"
-                  cursor="pointer"
-                  size="lg"
-                  border="1px"
-                  borderColor="#5142FC"
-                  bgColor="#14141F"
-                  _hover={{
-                    backgroundImage: 'linear-gradient(#E250E5,#4B50E6)',
+              <Flex flex="2">
+                <UnorderedList
+                  listStyleType="none"
+                  display="flex"
+                  flexDirection={{
+                    base: 'column',
+                    sm: 'column',
+                    md: 'column',
+                    lg: 'column',
+                    xl: 'row',
                   }}
-                  margin="0 auto"
-                  type="tel"
-                  color="white"
-                  py="1.5em"
-                  px="3.4em"
+                  width="100%"
+                  my={{
+                    base: '0',
+                    sm: '0',
+                    md: '0',
+                    lg: '0',
+                    xl: '1.6rem',
+                  }}
+                  justifyContent="space-between"
                 >
-                  <Image mr="1.0rem" src={WalletImage} />
-                  Wallet Connect
-                </Button>
+                  <ListItem
+                    fontFamily="'Rubik', sans-serif"
+                    fontWeight="700"
+                    fontSize="clamp(1.25rem,50vw,1.6rem)"
+                    lineHeight="56px"
+                    color="white"
+                  >
+                    Explore
+                  </ListItem>
+                  <ListItem
+                    fontFamily="'Rubik', sans-serif"
+                    fontWeight="700"
+                    fontSize="clamp(1.25rem,50vw,1.6rem)"
+                    lineHeight="56px"
+                    color="white"
+                  >
+                    Marketplace
+                  </ListItem>
+                  <ListItem
+                    fontFamily="'Rubik', sans-serif"
+                    fontWeight="700"
+                    fontSize="clamp(1.5rem,50vw,1.6rem)"
+                    lineHeight="56px"
+                    color="white"
+                  >
+                    Artists
+                  </ListItem>
+                  <ListItem
+                    fontFamily="'Rubik', sans-serif"
+                    fontWeight="700"
+                    fontSize="clamp(1.5rem,50vw,1.6rem)"
+                    lineHeight="56px"
+                    color="white"
+                  >
+                    Collection
+                  </ListItem>
+                </UnorderedList>
+              </Flex>
+              <Flex
+                flex="1"
+                justifyContent={{
+                  sm: 'center',
+                  md: 'center',
+                  lg: 'center',
+                  xl: 'flex-end',
+                }}
+              >
+                <Flex w="80%" py="1.8em">
+                  <SearchIcon mr="1.0rem" w={6} h={6} color="white" my="1rem" />
+                  <Button
+                    width="100%"
+                    cursor="pointer"
+                    size="lg"
+                    border="1px"
+                    borderColor="#5142FC"
+                    bgColor="#14141F"
+                    _hover={{
+                      backgroundImage: 'linear-gradient(#E250E5,#4B50E6)',
+                    }}
+                    margin="0 auto"
+                    type="tel"
+                    color="white"
+                    py="1.5em"
+                    px="3.4em"
+                  >
+                    <Image mr="1.0rem" src={WalletImage} />
+                    Wallet Connect
+                  </Button>
+                </Flex>
               </Flex>
             </Flex>
-          </Flex>
+          </Collapse>
         ) : (
           <Box></Box>
         )}
