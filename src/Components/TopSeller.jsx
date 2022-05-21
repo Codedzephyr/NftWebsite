@@ -192,7 +192,7 @@ const TopSeller = () => {
     },
   };
   return (
-    <Box w="95%" margin="0 auto" py="7em" maxW="1600px">
+    <Box w="95%" margin="0 auto" py="5em" maxW="1600px">
       <Slider ref={c => (slider.current = c)} {...settings}>
         <Box>
           <Box>

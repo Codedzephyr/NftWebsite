@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Box, Collapse } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
@@ -10,34 +10,32 @@ import { Image } from '@chakra-ui/react';
 import NavbarImage from '../Vector.png';
 import WalletImage from '../Images/Wallet.png';
 
-
 const svgVariants = {
   start: {
     opacity: 0,
     pathLength: 0,
+    rotate: -180,
   },
   finished: {
+    rotate: 0,
     opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 2,
-      ease: 'linear',
-    },
+    transition: { duration: 1 },
   },
 };
 
-const closeVariants = {
-  start: {
-    opacity: 0,
-  },
-  finished: {
-    opacity: 1,
-    transition: {
-      duration: 2,
-      ease: 'linear',
-    },
-  },
-};
+
+// const closeVariants = {
+//   start: {
+//     opacity: 0,
+//   },
+//   finished: {
+//     opacity: 1,
+//     transition: {
+//       duration: 2,
+//       ease: 'linear',
+//     },
+//   },
+// };
 
 const Headers = () => {
   const [isDisplay, setIsDisplay] = useState(false);
@@ -115,20 +113,23 @@ const Headers = () => {
                   justifyContent="flex-end"
                   cursor="pointer"
                 >
-                  <svg
+                  <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
+                    // variants={svgVariants}
+                    // initial="start"
+                    // animate="finished"
                     viewBox="0 0 448 512"
                     width="35"
                     height="35"
                   >
                     <motion.path
                       fill="#fff"
-                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
                       variants={svgVariants}
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
                       initial="start"
                       animate="finished"
                     />
-                  </svg>
+                  </motion.svg>
                 </Box>
               ) : (
                 <Box></Box>
@@ -140,22 +141,22 @@ const Headers = () => {
                   onClick={handleClickShow1}
                   display="flex"
                   justifyContent="flex-end"
-                  variants={closeVariants}
                   initial="start"
                   animate="finished"
                   cursor="pointer"
                 >
-                  <svg
+                  <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="35"
                     height="35"
                     viewBox="0 0 512 512"
                   >
-                    <path
+                    <motion.path
+                      variants={svgVariants}
                       fill="#fff"
                       d="M437.5 386.6L306.9 256l130.6-130.6c14.1-14.1 14.1-36.8 0-50.9-14.1-14.1-36.8-14.1-50.9 0L256 205.1 125.4 74.5c-14.1-14.1-36.8-14.1-50.9 0-14.1 14.1-14.1 36.8 0 50.9L205.1 256 74.5 386.6c-14.1 14.1-14.1 36.8 0 50.9 14.1 14.1 36.8 14.1 50.9 0L256 306.9l130.6 130.6c14.1 14.1 36.8 14.1 50.9 0 14-14.1 14-36.9 0-50.9z"
                     />
-                  </svg>
+                  </motion.svg>
                 </Box>
               ) : (
                 <Box></Box>
@@ -270,7 +271,7 @@ const Headers = () => {
           </Flex>
         </Flex>
         {isDisplay ? (
-          <Collapse in ={isDisplay} animateOpacity>
+          <Box>
             <Flex
               flex="4"
               display={{
@@ -381,7 +382,7 @@ const Headers = () => {
                 </Flex>
               </Flex>
             </Flex>
-          </Collapse>
+          </Box>
         ) : (
           <Box></Box>
         )}

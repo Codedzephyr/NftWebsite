@@ -4,6 +4,7 @@ import Headers from './../Components/Headers';
 import Title from './../Components/Title';
 import Liveauctions from '../Components/Liveauctions.jsx';
 import TopSeller from '../Components/TopSeller';
+import TodaysPicks from '../Components/TodaysPicks';
 
 const Homepage = () => {
   return (
@@ -144,8 +145,10 @@ const Homepage = () => {
       <Headers />
       <Title />
       <Liveauctions />
-      <Box h="100px"></Box>
+      <Box h="50px"></Box>
       <TopSeller />
+      <TodaysPicks/>
+      <Box h = "100px"> </Box>
     </Box>
   );
 };
