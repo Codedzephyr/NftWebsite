@@ -5,6 +5,8 @@ import { Image } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import MuriImage from '../Images/Muri.png';
+import PlaceBidImage from '../Images/Bag.png';
+import RecycleImage from '../Images/Recycle.png';
 import React from 'react';
 import ThugImage from '../Images/Thug.png';
 
@@ -91,37 +93,126 @@ const TodaysPicks = () => {
       <Flex justifyContent="center" alignItems="center">
         <Grid
           w={{
-            base: "79%",
+            base: '79%',
             sm: '60%',
             md: '74%',
-            lg: '80%',
+            lg: '65%',
             xl: '63%',
           }}
           m="1rem auto"
           templateColumns={{
-            base: "repeat(1,1fr)",
+            base: 'repeat(1,1fr)',
             sm: 'repeat(1,1fr)',
             md: 'repeat(2,1fr)',
-            lg: 'repeat(3,1fr)',
+            lg: 'repeat(2,1fr)',
             xl: 'repeat(3,1fr)',
           }}
           // display = "none"
           gap={6}
         >
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
+
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  0.50 ETH
+                </Text>
+              </Box>
+            </Flex>
+            <Flex mt="0.9rem">
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
+              </Box>
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
+              </Box>
+            </Flex>
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -185,21 +276,143 @@ const TodaysPicks = () => {
                 </Text>
               </Box>
             </Flex>
+            <Flex mt="0.9rem">
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
+              </Box>
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
+              </Box>
+            </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
+
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Box>
+                    <Image w="100%" maxW="500px" src={ThugImage} />
+                  </Box>
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
+              <Box flex="1">
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#8A8AA0"
+                  fontWeight="400"
+                  fontSize="13px"
+                  lineHeight="20px"
+                >
+                  Current Bid
+                </Text>
+                <Text
+                  fontFamily="'Urbanist', sans-serif"
+                  color="#EBEBEB"
+                  fontWeight="700"
+                  fontSize="15px"
+                  lineHeight="22px"
+                  my="0.1rem"
+                >
+                  0.50 eTH
+                </Text>
+              </Box>
+            </Flex>
+            <Flex mt="0.9rem">
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
+              </Box>
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
+              </Box>
+            </Flex>
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -263,21 +476,42 @@ const TodaysPicks = () => {
                 </Text>
               </Box>
             </Flex>
+            <Flex mt="0.9rem">
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
+              </Box>
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
+              </Box>
+            </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -341,21 +575,42 @@ const TodaysPicks = () => {
                 </Text>
               </Box>
             </Flex>
+            <Flex mt="0.9rem">
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
+              </Box>
+              <Box flex="1">
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
+              </Box>
+            </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
+            <Box>
+              <Image w="100%" maxW="500px" src={ThugImage} />
+            </Box>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -419,160 +674,35 @@ const TodaysPicks = () => {
                 </Text>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
-            <Text
-              ml="0.3rem"
-              my="1.1rem"
-              fontFamily="'Urbanist', sans-serif"
-              color="#fff"
-              lineHeight="26px"
-              fontWeight="700"
-              fontSize="18px"
-            >
-              MURI #8142
-            </Text>
-
-            <Flex>
-              <Flex flex="2">
-                <Box flex="1">
-                  <Image src={MuriImage} borderRadius="50%" />
-                </Box>
-                <Box flex="4">
-                  <Text
-                    fontFamily="'Urbanist', sans-serif"
-                    color="#8A8AA0"
-                    fontWeight="400"
-                    fontSize="13px"
-                    lineHeight="20px"
-                    ml="0.7rem"
-                  >
-                    Creator
-                  </Text>
-                  <Text
-                    fontFamily="'Urbanist', sans-serif"
-                    color="#EBEBEB"
-                    fontWeight="700"
-                    fontSize="15px"
-                    lineHeight="22px"
-                    my="0.1rem"
-                    ml="0.7rem"
-                  >
-                    MURI
-                  </Text>
-                </Box>
-              </Flex>
+            <Flex mt="0.9rem">
               <Box flex="1">
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#8A8AA0"
-                  fontWeight="400"
-                  fontSize="13px"
-                  lineHeight="20px"
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  border="1px solid #5142FC"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
                 >
-                  Current Bid
-                </Text>
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#EBEBEB"
-                  fontWeight="700"
-                  fontSize="15px"
-                  lineHeight="22px"
-                  my="0.1rem"
-                >
-                  0.50 eTH
-                </Text>
+                  <Image mr="0.3rem" src={PlaceBidImage} alt="placebidimage" />
+                  Place Bid
+                </Button>
               </Box>
-            </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            {/* <Box
-            bgImg={ThugImage}
-            bgSize="cover"
-            bgRepeat="no-repeat"
-            p="11em"
-            borderRadius="20px"
-            backgroundBlendMode="multiply"
-            _hover={{
-              cursor: 'pointer',
-              bgColor: 'rgba(0,0,0,0.5)',
-            }}
-          ></Box> */}
-            <Image src={ThugImage} />
-            <Text
-              ml="0.3rem"
-              my="1.1rem"
-              fontFamily="'Urbanist', sans-serif"
-              color="#fff"
-              lineHeight="26px"
-              fontWeight="700"
-              fontSize="18px"
-            >
-              MURI #8142
-            </Text>
-
-            <Flex>
-              <Flex flex="2">
-                <Box flex="1">
-                  <Image src={MuriImage} borderRadius="50%" />
-                </Box>
-                <Box flex="4">
-                  <Text
-                    fontFamily="'Urbanist', sans-serif"
-                    color="#8A8AA0"
-                    fontWeight="400"
-                    fontSize="13px"
-                    lineHeight="20px"
-                    ml="0.7rem"
-                  >
-                    Creator
-                  </Text>
-                  <Text
-                    fontFamily="'Urbanist', sans-serif"
-                    color="#EBEBEB"
-                    fontWeight="700"
-                    fontSize="15px"
-                    lineHeight="22px"
-                    my="0.1rem"
-                    ml="0.7rem"
-                  >
-                    MURI
-                  </Text>
-                </Box>
-              </Flex>
               <Box flex="1">
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#8A8AA0"
-                  fontWeight="400"
-                  fontSize="13px"
-                  lineHeight="20px"
+                <Button
+                  px="1.9em"
+                  bgColor="transparent"
+                  color="white"
+                  borderRadius="20px"
+                  _hover={{
+                    backgroundColor: 'transparent',
+                  }}
                 >
-                  Current Bid
-                </Text>
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#EBEBEB"
-                  fontWeight="700"
-                  fontSize="15px"
-                  lineHeight="22px"
-                  my="0.1rem"
-                >
-                  0.50 eTH
-                </Text>
+                  <Image mr="0.3rem" src={RecycleImage} alt="placebidimage" />
+                  View History
+                </Button>
               </Box>
             </Flex>
           </GridItem>
