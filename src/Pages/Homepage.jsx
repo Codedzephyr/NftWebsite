@@ -145,7 +145,7 @@ const Homepage = () => {
       <Headers />
       <Title />
       <Liveauctions />
-      <Box h="50px"></Box>
+      <Box h="100px"></Box>
       <TopSeller />
       <TodaysPicks/>
       <Box h = "100px"> </Box>

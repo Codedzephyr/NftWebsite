@@ -10,6 +10,8 @@ import { Image } from '@chakra-ui/react';
 import NavbarImage from '../Vector.png';
 import WalletImage from '../Images/Wallet.png';
 
+const MotionDiv = motion(Box);
+
 const svgVariants = {
   start: {
     opacity: 0,
@@ -23,6 +25,20 @@ const svgVariants = {
   },
 };
 
+const navVariants = {
+  start: {
+    // x: 0,
+    opacity: 0,
+  },
+  finished: {
+    // x: 100,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 // const closeVariants = {
 //   start: {
@@ -271,7 +287,7 @@ const Headers = () => {
           </Flex>
         </Flex>
         {isDisplay ? (
-          <Box>
+          <MotionDiv variants={navVariants} initial="start" animate="finished">
             <Flex
               flex="4"
               display={{
@@ -355,10 +371,18 @@ const Headers = () => {
                   sm: 'center',
                   md: 'center',
                   lg: 'center',
-                  xl: 'flex-end',
+                  xl: 'flex-start',
                 }}
               >
-                <Flex w="80%" py="1.8em">
+                <Flex
+                  w={{
+                    sm: '90%',
+                    md: '60%',
+                    lg: '80%',
+                    xl: '80%',
+                  }}
+                  py="1.8em"
+                >
                   <SearchIcon mr="1.0rem" w={6} h={6} color="white" my="1rem" />
                   <Button
                     width="100%"
@@ -382,7 +406,7 @@ const Headers = () => {
                 </Flex>
               </Flex>
             </Flex>
-          </Box>
+          </MotionDiv>
         ) : (
           <Box></Box>
         )}

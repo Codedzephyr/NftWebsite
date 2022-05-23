@@ -69,7 +69,6 @@ const TodaysPicks = () => {
               lg: '0rem',
               xl: '0rem',
             }}
-            fon
             textAlign="center"
             px={{
               base: '0.5rem',
@@ -89,19 +88,28 @@ const TodaysPicks = () => {
           </Button>
         </Box>
       </Flex>
-      <Grid
-        w="85%"
-        m="1rem auto"
-        templateColumns={{
-          sm: 'repeat(1,1fr)',
-          md: 'repeat(3,1fr)',
-          lg: 'repeat(3,1fr)',
-          xl: 'repeat(3,1fr)',
-        }}
-        gap={6}
-      >
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+      <Flex justifyContent="center" alignItems="center">
+        <Grid
+          w={{
+            base: "79%",
+            sm: '60%',
+            md: '74%',
+            lg: '80%',
+            xl: '63%',
+          }}
+          m="1rem auto"
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            sm: 'repeat(1,1fr)',
+            md: 'repeat(2,1fr)',
+            lg: 'repeat(3,1fr)',
+            xl: 'repeat(3,1fr)',
+          }}
+          // display = "none"
+          gap={6}
+        >
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -112,34 +120,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -148,37 +180,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -189,34 +198,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -225,37 +258,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -266,34 +276,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -302,37 +336,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -343,34 +354,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -379,37 +414,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -420,34 +432,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -456,37 +492,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-        <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-          <Box
+          </GridItem>
+          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+            {/* <Box
             bgImg={ThugImage}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -497,34 +510,58 @@ const TodaysPicks = () => {
               cursor: 'pointer',
               bgColor: 'rgba(0,0,0,0.5)',
             }}
-          ></Box>
-          <Text
-            ml="0.3rem"
-            my="1.1rem"
-            fontFamily="'Urbanist', sans-serif"
-            color="#fff"
-            lineHeight="26px"
-            fontWeight="700"
-            fontSize="18px"
-          >
-            MURI #8142
-          </Text>
+          ></Box> */}
+            <Image src={ThugImage} />
+            <Text
+              ml="0.3rem"
+              my="1.1rem"
+              fontFamily="'Urbanist', sans-serif"
+              color="#fff"
+              lineHeight="26px"
+              fontWeight="700"
+              fontSize="18px"
+            >
+              MURI #8142
+            </Text>
 
-          <Flex>
-            <Flex flex="2">
+            <Flex>
+              <Flex flex="2">
+                <Box flex="1">
+                  <Image src={MuriImage} borderRadius="50%" />
+                </Box>
+                <Box flex="4">
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                    ml="0.7rem"
+                  >
+                    Creator
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                    ml="0.7rem"
+                  >
+                    MURI
+                  </Text>
+                </Box>
+              </Flex>
               <Box flex="1">
-                <Image src={MuriImage} borderRadius="50%" />
-              </Box>
-              <Box flex="4">
                 <Text
                   fontFamily="'Urbanist', sans-serif"
                   color="#8A8AA0"
                   fontWeight="400"
                   fontSize="13px"
                   lineHeight="20px"
-                  ml="0.7rem"
                 >
-                  Creator
+                  Current Bid
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -533,36 +570,14 @@ const TodaysPicks = () => {
                   fontSize="15px"
                   lineHeight="22px"
                   my="0.1rem"
-                  ml="0.7rem"
                 >
-                  MURI
+                  0.50 eTH
                 </Text>
               </Box>
             </Flex>
-            <Box flex="1">
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#8A8AA0"
-                fontWeight="400"
-                fontSize="13px"
-                lineHeight="20px"
-              >
-                Current Bid
-              </Text>
-              <Text
-                fontFamily="'Urbanist', sans-serif"
-                color="#EBEBEB"
-                fontWeight="700"
-                fontSize="15px"
-                lineHeight="22px"
-                my="0.1rem"
-              >
-                0.50 eTH
-              </Text>
-            </Box>
-          </Flex>
-        </GridItem>
-      </Grid>
+          </GridItem>
+        </Grid>
+      </Flex>
     </Box>
   );
 };
