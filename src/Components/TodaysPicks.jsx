@@ -7,10 +7,48 @@ import { Flex } from '@chakra-ui/react';
 import MuriImage from '../Images/Muri.png';
 import PlaceBidImage from '../Images/Bag.png';
 import RecycleImage from '../Images/Recycle.png';
-import React from 'react';
+import React, { useState } from 'react';
 import ThugImage from '../Images/Thug.png';
+import { motion } from 'framer-motion';
+
+const MotionDiv = motion(Box);
 
 const TodaysPicks = () => {
+  const [blankColor, setBlankColorToColor] = useState(false);
+  const [blankColor1, setBlankColorToColor1] = useState(false);
+  const [blankColor2, setBlankColorToColor2] = useState(false);
+  const [blankColor3, setBlankColorToColor3] = useState(false);
+  const [blankColor4, setBlankColorToColor4] = useState(false);
+  const [blankColor5, setBlankColorToColor5] = useState(false);
+  const [blankColor6, setBlankColorToColor6] = useState(false);
+  const [blankColor7, setBlankColorToColor7] = useState(false);
+
+  const changeColor = () => {
+    setBlankColorToColor(!blankColor);
+  };
+
+  const changeColor1 = () => {
+    setBlankColorToColor1(!blankColor1);
+  };
+  const changeColor2 = () => {
+    setBlankColorToColor2(!blankColor2);
+  };
+  const changeColor3 = () => {
+    setBlankColorToColor3(!blankColor3);
+  };
+  const changeColor4 = () => {
+    setBlankColorToColor4(!blankColor4);
+  };
+  const changeColor5 = () => {
+    setBlankColorToColor5(!blankColor5);
+  };
+  const changeColor6 = () => {
+    setBlankColorToColor6(!blankColor6);
+  };
+  const changeColor7 = () => {
+    setBlankColorToColor7(!blankColor7);
+  };
+
   return (
     <Box w="100%" my="1rem">
       <Flex
@@ -105,22 +143,25 @@ const TodaysPicks = () => {
           gap={6}
         >
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill={blankColor ? '#FF0000' : null}
                 >
                   <path
                     d="M7.75284 13.1594L1.71486 6.7376C0.374826 5.31239 0.438543 3.06423 1.85651 1.71804C3.27243 0.373798 5.50351 0.437227 6.8416 1.86038L7.51962 2.58151L8.03586 3.13056L8.58242 2.61167L9.30006 1.93036C10.716 0.586122 12.947 0.649551 14.2851 2.0727C15.6252 3.49792 15.5615 5.74608 14.1435 7.09227L7.75284 13.1594Z"
@@ -129,7 +170,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -226,21 +267,24 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position = "relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor1}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
+                  fill={blankColor1 ? '#FF0000' : null}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -250,7 +294,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -347,21 +391,24 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor2}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
+                  fill={blankColor2 ? '#FF0000' : null}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -371,7 +418,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -468,22 +515,25 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor3}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill={blankColor3 ? '#FF0000' : null}
                 >
                   <path
                     d="M7.75284 13.1594L1.71486 6.7376C0.374826 5.31239 0.438543 3.06423 1.85651 1.71804C3.27243 0.373798 5.50351 0.437227 6.8416 1.86038L7.51962 2.58151L8.03586 3.13056L8.58242 2.61167L9.30006 1.93036C10.716 0.586122 12.947 0.649551 14.2851 2.0727C15.6252 3.49792 15.5615 5.74608 14.1435 7.09227L7.75284 13.1594Z"
@@ -492,7 +542,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -552,7 +602,7 @@ const TodaysPicks = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -589,21 +639,24 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor4}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
+                  fill={blankColor4 ? '#FF0000' : null}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -613,7 +666,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -630,29 +683,7 @@ const TodaysPicks = () => {
               <Flex flex="2">
                 <Box flex="1">
                   <Box position="relative">
-                    <Image w="100%" maxW="500px" src={ThugImage} />
-                    <Box
-                      bgColor="black"
-                      p="0.7em"
-                      borderRadius="12px"
-                      position="absolute"
-                      top="10px"
-                      right="11px"
-                    >
-                      <svg
-                        width="16"
-                        height="15"
-                        viewBox="0 0 16 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.75284 13.1594L1.71486 6.7376C0.374826 5.31239 0.438543 3.06423 1.85651 1.71804C3.27243 0.373798 5.50351 0.437227 6.8416 1.86038L7.51962 2.58151L8.03586 3.13056L8.58242 2.61167L9.30006 1.93036C10.716 0.586122 12.947 0.649551 14.2851 2.0727C15.6252 3.49792 15.5615 5.74608 14.1435 7.09227L7.75284 13.1594Z"
-                          stroke="white"
-                          stroke-width="1.5"
-                        />
-                      </svg>
-                    </Box>
+                    <Image src={MuriImage} borderRadius="50%" />
                   </Box>
                 </Box>
                 <Box flex="4">
@@ -697,7 +728,7 @@ const TodaysPicks = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -734,9 +765,34 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box>
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
-            </Box>
+              <Box
+                as={motion.div}
+                bgColor="black"
+                p="0.7em"
+                borderRadius="12px"
+                position="absolute"
+                top="10px"
+                right="11px"
+                onClick={changeColor5}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 16 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill={blankColor5 ? '#FF0000' : null}
+                >
+                  <path
+                    d="M7.75284 13.1594L1.71486 6.7376C0.374826 5.31239 0.438543 3.06423 1.85651 1.71804C3.27243 0.373798 5.50351 0.437227 6.8416 1.86038L7.51962 2.58151L8.03586 3.13056L8.58242 2.61167L9.30006 1.93036C10.716 0.586122 12.947 0.649551 14.2851 2.0727C15.6252 3.49792 15.5615 5.74608 14.1435 7.09227L7.75284 13.1594Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -796,7 +852,7 @@ const TodaysPicks = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -833,21 +889,24 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
                 right="11px"
+                onClick={changeColor6}
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
+                  fill={blankColor6 ? '#FF0000' : null}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -857,7 +916,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
@@ -917,7 +976,7 @@ const TodaysPicks = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -954,21 +1013,24 @@ const TodaysPicks = () => {
             </Flex>
           </GridItem>
           <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
-            <Box position="relative">
+            <MotionDiv position="relative">
               <Image w="100%" maxW="500px" src={ThugImage} />
               <Box
+                as={motion.div}
                 bgColor="black"
                 p="0.7em"
                 borderRadius="12px"
                 position="absolute"
                 top="10px"
+                whileTap={{ scale: 1.9, transition: { duration: 1 } }}
                 right="11px"
+                onClick={changeColor7}
               >
                 <svg
-                  width="16"
-                  height="15"
+                  width="20"
+                  height="20"
                   viewBox="0 0 16 15"
-                  fill="none"
+                  fill={blankColor7 ? '#FF0000' : null}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -978,7 +1040,7 @@ const TodaysPicks = () => {
                   />
                 </svg>
               </Box>
-            </Box>
+            </MotionDiv>
             <Text
               ml="0.3rem"
               my="1.1rem"
