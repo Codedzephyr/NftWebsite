@@ -30,7 +30,6 @@ const LiveauctionsDesktop = () => {
   };
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showHover, setShowHover] = useState(containersForHover);
-  
 
   const slider = useRef();
 
@@ -75,7 +74,6 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
-
   };
 
   const handleHoverSecondGone = (e, key) => {
@@ -100,7 +98,6 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
-
   };
 
   const handleHoverThirdGone = (e, key) => {
@@ -125,7 +122,7 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
-
+    console.log('mouseOver');
   };
 
   const handleHoverFourthGone = (e, key) => {
@@ -138,6 +135,7 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
+    console.log('mouseLeave');
   };
 
   const handleHoverFifth = (e, key) => {
@@ -150,7 +148,6 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
-
   };
 
   const handleHoverFifthGone = (e, key) => {
@@ -175,7 +172,6 @@ const LiveauctionsDesktop = () => {
       ...prevState,
       [key]: !showHover[key],
     }));
-
   };
 
   const handleHoverSixthGone = (e, key) => {
@@ -343,7 +339,7 @@ const LiveauctionsDesktop = () => {
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
               position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleClick(e, 'firstHoverContainer');
               }}
               onMouseLeave={e => {
@@ -355,9 +351,27 @@ const LiveauctionsDesktop = () => {
                   bgColor="white"
                   position="absolute"
                   top="35%"
-                  left="12.5%"
+                  left="-10%"
                   transform="translate(63%, 73%)"
+                  px="1.9em"
+                  borderRadius="20px"
                 >
+                  <Box mr="0.5rem">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="#4B50E6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                        fill="#4B50E6"
+                      />
+                    </svg>
+                  </Box>
                   Place Bid
                 </Button>
               )}
@@ -410,7 +424,7 @@ const LiveauctionsDesktop = () => {
                   fontSize="13px"
                   lineHeight="20px"
                 >
-                  4.89 eTH
+                  4.89 ETH
                 </Text>
                 <Text
                   fontFamily="'Urbanist', sans-serif"
@@ -440,7 +454,7 @@ const LiveauctionsDesktop = () => {
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
               position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleHoverSecond(e, 'secondHoverContainer');
               }}
               onMouseLeave={e => {
@@ -452,9 +466,27 @@ const LiveauctionsDesktop = () => {
                   bgColor="white"
                   position="absolute"
                   top="35%"
-                  left="12.5%"
+                  left="-10%"
                   transform="translate(63%, 73%)"
+                  px="1.9em"
+                  borderRadius="20px"
                 >
+                  <Box mr="0.5rem">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="#4B50E6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                        fill="#4B50E6"
+                      />
+                    </svg>
+                  </Box>
                   Place Bid
                 </Button>
               )}
@@ -518,7 +550,7 @@ const LiveauctionsDesktop = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  5.05 eTH
+                  5.05 ETH
                 </Text>
               </Box>
             </Flex>
@@ -538,7 +570,7 @@ const LiveauctionsDesktop = () => {
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
               position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleHoverThird(e, 'thirdHoverContainer');
               }}
               onMouseLeave={e => {
@@ -550,9 +582,27 @@ const LiveauctionsDesktop = () => {
                   bgColor="white"
                   position="absolute"
                   top="35%"
-                  left="12.5%"
+                  left="-10%"
                   transform="translate(63%, 73%)"
+                  px="1.9em"
+                  borderRadius="20px"
                 >
+                  <Box mr="0.5rem">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="#4B50E6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                        fill="#4B50E6"
+                      />
+                    </svg>
+                  </Box>
                   Place Bid
                 </Button>
               )}
@@ -616,7 +666,7 @@ const LiveauctionsDesktop = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  5.05 eTH
+                  5.05 ETH
                 </Text>
               </Box>
             </Flex>
@@ -635,24 +685,44 @@ const LiveauctionsDesktop = () => {
                 cursor: 'pointer',
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
-              position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleHoverFourth(e, 'fourthHoverContainer');
               }}
               onMouseLeave={e => {
-                handleHoverFourthGone(e, 'fouthHoverContainer');
+                handleHoverFourthGone(e, 'fourthHoverContainer');
               }}
+              position="relative"
             >
               {showHover['fourthHoverContainer'] && (
-                <Button
-                  bgColor="white"
-                  position="absolute"
-                  top="35%"
-                  left="12.5%"
-                  transform="translate(63%, 73%)"
-                >
-                  Place Bid
-                </Button>
+                <Box>
+                  <Button
+                    bgColor="white"
+                    position="absolute"
+                    top="35%"
+                    transform="translate(63%, 73%)"
+                    left="-10%"
+                    px="1.9em"
+                    borderRadius="20px"
+                  >
+                    <Box mr="0.5rem">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="#4B50E6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                          fill="#4B50E6"
+                        />
+                      </svg>
+                    </Box>
+                    Place Bid
+                  </Button>
+                </Box>
               )}
             </Box>
             <Text
@@ -714,7 +784,7 @@ const LiveauctionsDesktop = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -734,7 +804,7 @@ const LiveauctionsDesktop = () => {
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
               position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleHoverFifth(e, 'fifthHoverContainer');
               }}
               onMouseLeave={e => {
@@ -746,9 +816,27 @@ const LiveauctionsDesktop = () => {
                   bgColor="white"
                   position="absolute"
                   top="35%"
-                  left="12.5%"
+                  left="-10%"
                   transform="translate(63%, 73%)"
+                  px="1.9em"
+                  borderRadius="20px"
                 >
+                  <Box mr="0.5rem">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="#4B50E6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                        fill="#4B50E6"
+                      />
+                    </svg>
+                  </Box>
                   Place Bid
                 </Button>
               )}
@@ -812,7 +900,7 @@ const LiveauctionsDesktop = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
@@ -832,7 +920,7 @@ const LiveauctionsDesktop = () => {
                 bgColor: 'rgba(0,0,0,0.5)',
               }}
               position="relative"
-              onMouseOver={e => {
+              onMouseEnter={e => {
                 handleHoverSixth(e, 'sixthHoverContainer');
               }}
               onMouseLeave={e => {
@@ -844,9 +932,27 @@ const LiveauctionsDesktop = () => {
                   bgColor="white"
                   position="absolute"
                   top="35%"
-                  left="12.5%"
+                  left="-10%"
                   transform="translate(63%, 73%)"
+                  px="1.9em"
+                  borderRadius="20px"
                 >
+                  <Box mr="0.5rem">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="#4B50E6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.8758 4.39175H13.0554C15.4168 4.39175 17.3333 6.26675 17.3333 8.56675V13.1667C17.3333 15.4668 15.4168 17.3334 13.0554 17.3334H4.94456C2.58317 17.3334 0.666672 15.4668 0.666672 13.1667V8.56675C0.666672 6.26675 2.58317 4.39175 4.94456 4.39175H5.12424C5.14135 3.39175 5.54347 2.45842 6.27071 1.75841C7.00651 1.05008 7.94764 0.691748 9.00856 0.666748C11.1304 0.666748 12.8501 2.33341 12.8758 4.39175ZM7.16908 2.65008C6.68996 3.11675 6.42473 3.73341 6.40762 4.39175H11.5924C11.5668 3.02508 10.4203 1.91675 9.00857 1.91675C8.34978 1.91675 7.66532 2.17508 7.16908 2.65008ZM12.2512 7.60008C12.6105 7.60008 12.8929 7.31675 12.8929 6.97508V6.00841C12.8929 5.66675 12.6105 5.38341 12.2512 5.38341C11.9004 5.38341 11.6095 5.66675 11.6095 6.00841V6.97508C11.6095 7.31675 11.9004 7.60008 12.2512 7.60008ZM6.31347 6.97508C6.31347 7.31675 6.03113 7.60008 5.67178 7.60008C5.321 7.60008 5.0301 7.31675 5.0301 6.97508V6.00841C5.0301 5.66675 5.321 5.38341 5.67178 5.38341C6.03113 5.38341 6.31347 5.66675 6.31347 6.00841V6.97508Z"
+                        fill="#4B50E6"
+                      />
+                    </svg>
+                  </Box>
                   Place Bid
                 </Button>
               )}
@@ -910,7 +1016,7 @@ const LiveauctionsDesktop = () => {
                   lineHeight="22px"
                   my="0.1rem"
                 >
-                  0.50 eTH
+                  0.50 ETH
                 </Text>
               </Box>
             </Flex>
