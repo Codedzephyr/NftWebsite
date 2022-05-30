@@ -35,7 +35,7 @@ const Liveauctions = () => {
               lg: 'left',
               xl: 'left',
             }}
-            fontSize="clamp(1.5rem,10vw,2.25rem)"
+            fontSize="clamp(1.9rem,5vw,2.25rem)"
             lineHeight="44px"
             textAlign={{
               base: 'center',
@@ -48,7 +48,12 @@ const Liveauctions = () => {
             Live Auctions
           </Text>
         </Box>
-        <Box flex="1">
+        <Box
+          flex="1"
+          display="flex"
+          alignContent="flex-end"
+          justifyContent="center"
+        >
           <Button
             size="lg"
             border="1px"

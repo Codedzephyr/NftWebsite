@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import ArrowLearnImage from '../Images/Arrow_1.png';
 import { Image } from '@chakra-ui/react';
@@ -128,23 +128,24 @@ const TodaysPicks = () => {
           </Button>
         </Box>
       </Flex>
-      <Flex justifyContent="center" alignItems="center">
-        <Grid
+      <Flex my="2rem" justifyContent="center" alignItems="center">
+        <Flex
           w="95%"
-          maxW="1200px"
-          m="1rem auto"
-          templateColumns={{
-            base: 'repeat(1,1fr)',
-            sm: 'repeat(1,1fr)',
-            md: 'repeat(2,1fr)',
-            lg: 'repeat(2,1fr)',
-            xl: 'repeat(3,1fr)',
-          }}
+          flexWrap="wrap"
+          maxW="1600px"
           gap={6}
+          justifyContent="center"
+          alignItems="center"
         >
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -265,10 +266,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -389,10 +396,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -513,10 +526,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -637,10 +656,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -763,10 +788,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="570px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -887,10 +918,16 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="516px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -1011,10 +1048,17 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-          <GridItem p="0.9em" bgColor="#343444" borderRadius="20px">
+          </Box>
+          <Box
+            maxW=" 350px"
+            w="100%"
+            p="0.9em"
+            bgColor="#343444"
+            borderRadius="20px"
+            id="8th"
+          >
             <MotionDiv position="relative">
-              <Image w="100%" maxW="500px" src={ThugImage} />
+              <Image w="100%" maxW="570px" src={ThugImage} />
               <Box
                 as={motion.div}
                 bgColor="black"
@@ -1082,26 +1126,28 @@ const TodaysPicks = () => {
                   </Text>
                 </Box>
               </Flex>
-              <Box flex="1">
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#8A8AA0"
-                  fontWeight="400"
-                  fontSize="13px"
-                  lineHeight="20px"
-                >
-                  Current Bid
-                </Text>
-                <Text
-                  fontFamily="'Urbanist', sans-serif"
-                  color="#EBEBEB"
-                  fontWeight="700"
-                  fontSize="15px"
-                  lineHeight="22px"
-                  my="0.1rem"
-                >
-                  0.50 eTH
-                </Text>
+              <Box flex="1" display="flex" justifyContent="flex-end">
+                <Box>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#8A8AA0"
+                    fontWeight="400"
+                    fontSize="13px"
+                    lineHeight="20px"
+                  >
+                    Current Bid
+                  </Text>
+                  <Text
+                    fontFamily="'Urbanist', sans-serif"
+                    color="#EBEBEB"
+                    fontWeight="700"
+                    fontSize="15px"
+                    lineHeight="22px"
+                    my="0.1rem"
+                  >
+                    0.50 eTH
+                  </Text>
+                </Box>
               </Box>
             </Flex>
             <Flex mt="0.9rem">
@@ -1135,9 +1181,24 @@ const TodaysPicks = () => {
                 </Button>
               </Box>
             </Flex>
-          </GridItem>
-        </Grid>
+          </Box>
+        </Flex>
       </Flex>
+
+      <Box my="1.5rem" display="grid" placeItems="center">
+        <Button
+          px="2.1em"
+          border="1px solid white"
+          bgColor="transparent"
+          color="white"
+          borderRadius="20px"
+          _hover={{
+            backgroundImage: 'linear-gradient(#E250E5,#4B50E6)',
+          }}
+        >
+          Load More
+        </Button>
+      </Box>
     </Box>
   );
 };

@@ -5,6 +5,9 @@ import Title from './../Components/Title';
 import Liveauctions from '../Components/Liveauctions.jsx';
 import TopSeller from '../Components/TopSeller';
 import TodaysPicks from '../Components/TodaysPicks';
+import PopularCollection from '../Components/PopularCollection';
+import Createsellnft from '../Components/createsellnft';
+import Footer from '../Components/Footer';
 
 const Homepage = () => {
   return (
@@ -147,8 +150,13 @@ const Homepage = () => {
       <Liveauctions />
       <Box h="100px"></Box>
       <TopSeller />
-      <TodaysPicks/>
-      <Box h = "100px"> </Box>
+      <TodaysPicks />
+      <Box h="70px"> </Box>
+      <PopularCollection />
+      <Box h="70px"> </Box>
+      <Createsellnft />
+      <Box h="50px"> </Box>
+      <Footer />
     </Box>
   );
 };

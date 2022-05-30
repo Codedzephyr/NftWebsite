@@ -8,7 +8,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { ListItem, UnorderedList } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 import NavbarImage from '../Vector.png';
-import WalletImage from '../Images/Wallet.png';
+import WalletImage from '../Images/IconWallet.png';
 
 const MotionDiv = motion(Box);
 
